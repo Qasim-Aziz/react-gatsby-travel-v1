@@ -4,12 +4,13 @@ import {FaBars} from  'react-icons/fa'
 import styled from 'styled-components'
 import { menuData } from '../data/MenuData'
 import { Button } from "./Button"
+import image from '../assets/images/logo.png';
 
 
 const Header = () => {
   return (
     <Nav>
-      <NavLink to="/">Travel and Tours</NavLink>
+      <NavLink to="/"><img src={image} height={300} width={400} /></NavLink>
       <Bars />
       <NavMenu>
         {menuData.map((item, index) => (
@@ -43,7 +44,7 @@ const NavLink = styled(Link)`
   display: flex;
   align-items: center;
   text-decoration: none;
-  padding: 0 1rem;
+  padding: 0 2rem;
   height: 100%;
   cursor: pointer;
 `
@@ -66,7 +67,7 @@ const Bars = styled(FaBars)`
 const NavMenu = styled.div`
   display: flex;
   align-tiems: center;
-  margin-right: -48px;
+  margin-right: -35px;
   @media screen and (max-width: 768px){
     display: none;
     }
